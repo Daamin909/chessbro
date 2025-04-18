@@ -5,11 +5,11 @@ import { Chess } from "chess.js";
 import gameLoaded from "../assets/sound/game-loaded.mp3";
 import showErrorMessage from "./errorMessage";
 import classifyMoves, { countMoveCategories } from "./classifymoves.js";
-import { getGames } from './index';
+import { getGames } from "./index";
 
 let engineMessagesForEval = [];
 const STOCKFISH_URL =
-  "https://cdn.jsdelivr.net/npm/stockfish.js@10.0.2/stockfish.js";
+  "https://cdn.jsdelivr.net/gh/nmrugg/stockfish.js@master/src/stockfish-17-lite.js";
 const extractEval = (engineMessage, depth, engineMessagesForEval) => {
   engineMessage = engineMessagesForEval[engineMessagesForEval.length - 2];
   const depthRegex = new RegExp(`^.*info depth ${depth}\\b.*$`, "gm");
