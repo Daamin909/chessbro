@@ -9,7 +9,7 @@ import { getGames } from "./index";
 
 let engineMessagesForEval = [];
 const STOCKFISH_URL =
-  "https://cdn.jsdelivr.net/gh/nmrugg/stockfish.js@master/src/stockfish-17-lite.js";
+  "/public/stockfish.js";
 const extractEval = (engineMessage, depth, engineMessagesForEval) => {
   engineMessage = engineMessagesForEval[engineMessagesForEval.length - 2];
   const depthRegex = new RegExp(`^.*info depth ${depth}\\b.*$`, "gm");
